@@ -81,7 +81,7 @@ function Home () {
       <div className="content">
         <div className="inner">
           <h1>Devjar.xyz</h1>
-          <p>Web and App solutions<br />
+          <p>Web and App solutions <br />
           with ready built designs to chose from.</p>
         </div>
       </div>
