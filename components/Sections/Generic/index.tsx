@@ -8,6 +8,7 @@ interface pageProps {
     paragraphs: string[];
     close: () => void;
     name: string;
+    img?: string;
     
 }
 
@@ -16,7 +17,7 @@ function Generic(props: pageProps){
     const modalRef = useRef<HTMLDivElement>(null);
     useEffect(() => {
         
-        if(props.isActive && !isEmpty(modalRef)) {
+        if(props.isActive && !isEmpty(modalRef.current)) {
 
             modalRef!.current!.classList.add('active')
             setTimeout(() => {
@@ -26,7 +27,7 @@ function Generic(props: pageProps){
             }, 325);
            
         } else {
-           if(!isEmpty(modalRef)){
+           if(!isEmpty(modalRef.current)){
             modalRef!.current!.classList.remove('active')
             setTimeout(() => {
                
@@ -35,8 +36,6 @@ function Generic(props: pageProps){
            }
            
         }
-         
-      
 
         return () => {
            
@@ -45,7 +44,7 @@ function Generic(props: pageProps){
     return(
         <article id={props.name} ref={modalRef} >
             <h2 className="major">{props.header}</h2>
-            <span className="image main"><img src="static/images/pic01.jpg" alt="" /></span>
+            <span className="image main"><img src={props.img} alt="" /></span>
             {props.paragraphs.map((paragraph: string) => {
                 return <React.Fragment key={paragraph}>
                         <p>{paragraph}</p>

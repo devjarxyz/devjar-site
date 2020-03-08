@@ -4,7 +4,7 @@ import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import _, { isEmpty } from 'lodash';
 import Generic from '../components/Sections/Generic';
-import { introParas, workParas, aboutParas } from '../services/texts/static';
+import { introParas, workParas, showcaseParas } from '../services/texts/static';
 import Contact from '../components/Sections/Contact';
 
 
@@ -14,8 +14,9 @@ import Contact from '../components/Sections/Contact';
 			<script src="/static/assets/js/main.js"></script> */}
 
 function Home () {
-  const initState = {intro: false, work: false, about: false, contact: false };
+  const initState = {intro: false, work: false, showcase: false, contact: false };
   const [modal, setModal] = useState({...initState});
+  const [hover, setHover] = useState("");
  
 
   const [head] = useState( <Head>
@@ -40,24 +41,24 @@ function Home () {
 
   useEffect(() => {
       
-      if(modal.about || modal.contact || modal.intro || modal.work) {
-        if(!isEmpty(modalRef)  && !isEmpty(mainRef)){
+      if(modal.showcase || modal.contact || modal.intro || modal.work) {
+        if(!isEmpty(modalRef.current) && !isEmpty(mainRef.current) && !isEmpty(mainRef.current)){
           
           setTimeout(() => {
-            modalRef!.current!.style.display = 'none';
-            mainRef!.current!.style.display = 'flex';
-            footerRef!.current!.style.display = 'none';
+            modalRef.current!.style.display = 'none';
+            mainRef.current!.style.display = 'flex';
+            footerRef.current!.style.display = 'none';
             
         }, 325);
         }
        
          
       } else {
-          if(!isEmpty(modalRef)  && !isEmpty(mainRef)){
+          if(!isEmpty(modalRef.current) && !isEmpty(mainRef.current) && !isEmpty(mainRef.current)){
             setTimeout(() => {
-              modalRef!.current!.style.display = 'flex';
-              footerRef!.current!.style.display = 'block';
-              mainRef!.current!.style.display = 'none';
+              modalRef.current!.style.display = 'flex';
+              footerRef.current!.style.display = 'block';
+              mainRef.current!.style.display = 'none';
           }, 325);
           }
         
@@ -66,15 +67,18 @@ function Home () {
     
 
       return () => {
-         
+        // document.body.classList.remove('is-article-visible');
+        //      modalRef.current!.style.display = 'flex';
+        //       footerRef.current!.style.display = 'block';
+        //       mainRef.current!.style.display = 'none';
         };
-  }, [modal.about, modal.contact, modal.intro, modal.work]);
+  }, [modal.showcase, modal.contact, modal.intro, modal.work]);
 
  
   return(
     <div id="wrapper">
       {head && head}
-    <header id="header" ref={modalRef} >
+    <header id="header" ref={modalRef} className={hover} >
       <div className="logo">
         <img src="/static/images/logoNoBg.png"/>
       </div>
@@ -87,18 +91,18 @@ function Home () {
       </div>
       <nav>
         <ul>
-          <li><a onClick={() => activateModal('intro')} >Intro</a></li>
-          <li><a onClick={() => activateModal('work')}>Work</a></li>
-          <li><a onClick={() => activateModal('about')}>About</a></li>
-          <li><a onClick={() => activateModal('contact')}>Contact</a></li>
+          <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => activateModal('intro')} >Intro</a></li>
+          <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => activateModal('work')}>Work</a></li>
+          <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => activateModal('showcase')}>Showcase</a></li>
+          <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => activateModal('contact')}>Contact</a></li>
           
         </ul>
       </nav>
     </header>
     <div id="main" ref={mainRef} >
-      <Generic name="intro" isActive={modal.intro} header="Intro" paragraphs={_.map(introParas, p => p['en'])} close={close}/>
+      <Generic name="intro" isActive={modal.intro} header="Intro" paragraphs={_.map(introParas, p => p['en'])} img={"static/images/vladbw1-flat.jpg"} close={close}/>
       <Generic name="work" isActive={modal.work} header="Work" paragraphs={_.map(workParas, p => p['en'])} close={close}/>
-      <Generic name="about" isActive={modal.about} header="Work" paragraphs={_.map(aboutParas, p => p['en'])} close={close}/>
+      <Generic name="showcase" isActive={modal.showcase} header="Work" paragraphs={_.map(showcaseParas, p => p['en'])} close={close}/>
       <Contact name="contact" isActive={modal.contact} header="Contact" close={close} />
     </div>
 

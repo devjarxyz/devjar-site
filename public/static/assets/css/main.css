@@ -1601,8 +1601,13 @@ body .logo {
 body .logo img {
 	width: 50%;
 	height: auto;
+	transition: transform 0.5s ease-in-out;
 }
 
 body #header nav li{
 	cursor: pointer;
+}
+
+body #header.hover .logo img {
+	transform: rotate(90deg);
 }
