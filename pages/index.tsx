@@ -7,12 +7,6 @@ import Generic from '../components/Sections/Generic';
 import { introParas, workParas, showcaseParas } from '../services/texts/static';
 import Contact from '../components/Sections/Contact';
 
-
-{/* <script src="/static/assets/js/jquery.min.js"></script>
-			<script src="/static/assets/js/skel.min.js"></script>
-			<script src="/static/assets/js/util.js"></script>
-			<script src="/static/assets/js/main.js"></script> */}
-
 function Home () {
   const initState = {intro: false, work: false, showcase: false, contact: false };
   const [modal, setModal] = useState({...initState});
@@ -76,6 +70,7 @@ function Home () {
 
  
   return(
+    <>
     <div id="wrapper">
       {head && head}
     <header id="header" ref={modalRef} className={hover} >
@@ -112,6 +107,8 @@ function Home () {
 
   
   </div>
+  <div id="bg"></div>
+  </>
   );
 }
 

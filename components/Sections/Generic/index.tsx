@@ -46,9 +46,9 @@ function Generic(props: pageProps){
             <h2 className="major">{props.header}</h2>
             <span className="image main"><img src={props.img} alt="" /></span>
             {props.paragraphs.map((paragraph: string) => {
-                return <React.Fragment key={paragraph}>
-                        <p>{paragraph}</p>
-                </React.Fragment>;
+                return(
+                    <p key={paragraph}>{paragraph}</p>
+                );
             })}
            
             <CloseButton close={props.close} />

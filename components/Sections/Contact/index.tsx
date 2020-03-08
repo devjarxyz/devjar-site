@@ -32,10 +32,10 @@ const Contact = (props: pageProps) => {
             </ul>
             </form>
             <ul className="icons">
-            <li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
-            <li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
-            <li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
-            <li><a href="#" className="icon fa-github"><span className="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/vladimir-strukelj-00016b61/" className="icon fa-linkedin" target="_blank"><span className="label">Twitter</span></a></li>
+            <li><a href="https://www.facebook.com/vladdewilson" className="icon fa-facebook" target="_blank"><span className="label">Facebook</span></a></li>
+            <li><a href="https://www.instagram.com/vladstrukelj" className="icon fa-instagram" target="_blank"><span className="label">Instagram</span></a></li>
+            <li><a href="https://github.com/devjarxyz" className="icon fa-github" target="_blank"><span className="label">GitHub</span></a></li>
             </ul>
             <CloseButton close={props.close} />
       </article>
