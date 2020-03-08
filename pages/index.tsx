@@ -15,6 +15,7 @@ function Home () {
 
 
   const close = () => {
+    //meh
     setModal(initState);
   }
 
