@@ -1,6 +1,4 @@
 import Head from 'next/head';
-// import styled from 'styled-components';
-
 import { useState, useRef, useEffect } from 'react';
 import _, { isEmpty } from 'lodash';
 import Generic from '../components/Sections/Generic';
@@ -95,10 +93,10 @@ function Home () {
       </nav>
     </header>
     <div id="main" ref={mainRef} >
-      <Generic name="intro" isActive={modal.intro} header="Intro" paragraphs={_.map(introParas, p => p['en'])} img={"static/images/vladbw1-flat.jpg"} close={close}/>
-      <Generic name="work" isActive={modal.work} header="Work" paragraphs={_.map(workParas, p => p['en'])} close={close}/>
-      <Generic name="showcase" isActive={modal.showcase} header="Work" paragraphs={_.map(showcaseParas, p => p['en'])} close={close}/>
-      <Contact name="contact" isActive={modal.contact} header="Contact" close={close} />
+      {modal.intro && <Generic name="intro" isActive={modal.intro} header="Intro" paragraphs={_.map(introParas, p => p['en'])} img={"static/images/vladbw1-flat.jpg"} close={close}/>}
+      {modal.work &&  <Generic name="work" isActive={modal.work} header="Work" paragraphs={_.map(workParas, p => p['en'])} close={close}/>}
+      {modal.showcase && <Generic name="showcase" isActive={modal.showcase} header="Work" paragraphs={_.map(showcaseParas, p => p['en'])} close={close}/>}
+      {modal.contact && <Contact name="contact" isActive={modal.contact} header="Contact" close={close} />}
     </div>
 
     <footer id="footer" ref={footerRef}>
