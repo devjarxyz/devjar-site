@@ -9,7 +9,7 @@ export const introParas = [
         'amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.'
     },
     {
-        en: "The development jar which is where I keep anything and everything I've learned so far, which is also what I can use to help you and your business. I am very much a software generalist, professionally I've had the pleasure to use: "+ 
+        en: "The development jar is where I keep anything and everything I've learned so far, which is also what I can use to help you and your business. I am very much a software generalist, professionally I've had the pleasure to use: "+ 
         ".Net(C#), ReactJs, React-ts, React360, Nextjs, Angular(mostly 1, please don't ask why or how), QT, Android (Kotlin), Wordpress & PHP, MS SQL, MySQL, mongodb. As a hobby I code games (will upload some here in the"+ 
         " near future) in unity, occasionally also touching python now and then. The jar is far from full, so I don't mind adding more to it",        
         sv: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. className aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero' + 

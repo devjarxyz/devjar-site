@@ -95,7 +95,7 @@ function Home () {
     <div id="main" ref={mainRef} >
       {modal.intro && <Generic name="intro" isActive={modal.intro} header="Intro" paragraphs={_.map(introParas, p => p['en'])} img={"static/images/vladbw1-flat.jpg"} close={close}/>}
       {modal.work &&  <Generic name="work" isActive={modal.work} header="Work" paragraphs={_.map(workParas, p => p['en'])} close={close}/>}
-      {modal.showcase && <Generic name="showcase" isActive={modal.showcase} header="Work" paragraphs={_.map(showcaseParas, p => p['en'])} close={close}/>}
+      {modal.showcase && <Generic name="showcase" isActive={modal.showcase} header="ShowCase" paragraphs={_.map(showcaseParas, p => p['en'])} close={close}/>}
       {modal.contact && <Contact name="contact" isActive={modal.contact} header="Contact" close={close} />}
     </div>
 
