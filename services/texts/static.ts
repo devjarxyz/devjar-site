@@ -43,3 +43,47 @@ export const showcaseParas = [
     }
 ]
 
+export const pixelarityData = [
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/alpha.png'
+    },
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/altitude.png'
+    },
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/astral.png'
+    },
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/axiom.png'
+    },
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/polaris.png'
+    },
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/strongly_typed.png'
+    },
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/dopetrope.png'
+    }
+]

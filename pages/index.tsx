@@ -2,8 +2,9 @@ import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import _, { isEmpty } from 'lodash';
 import Generic from '../components/Sections/Generic';
-import { introParas, workParas, showcaseParas } from '../services/texts/static';
+import { introParas, workParas, showcaseParas, pixelarityData } from '../services/texts/static';
 import Contact from '../components/Sections/Contact';
+import Showcase from './../components/Sections/Showcase/index';
 
 function Home () {
   const initState = {intro: false, work: false, showcase: false, contact: false };
@@ -95,7 +96,7 @@ function Home () {
     <div id="main" ref={mainRef} >
       {modal.intro && <Generic name="intro" isActive={modal.intro} header="Intro" paragraphs={_.map(introParas, p => p['en'])} img={"static/images/vladbw1-flat.jpg"} close={close}/>}
       {modal.work &&  <Generic name="work" isActive={modal.work} header="Work" paragraphs={_.map(workParas, p => p['en'])} close={close}/>}
-      {modal.showcase && <Generic name="showcase" isActive={modal.showcase} header="ShowCase" paragraphs={_.map(showcaseParas, p => p['en'])} close={close}/>}
+      {modal.showcase && <Showcase name="showcase" isActive={modal.showcase} showcaseItems={_.map(pixelarityData, data => {return { url: data.img, name: data['en']}})} header="ShowCase" paragraphs={_.map(showcaseParas, p => p['en'])} close={close}/>}
       {modal.contact && <Contact name="contact" isActive={modal.contact} header="Contact" close={close} />}
     </div>
 
