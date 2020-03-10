@@ -1649,7 +1649,7 @@ body #header.hover .logo img {
 	transform: scale(1.4);
 }
 .showcase__portal__wrapper {
-	position: absolute;
+
     width: 100vw;
     height: 100vh;
     display: block;
@@ -1659,7 +1659,8 @@ body #header.hover .logo img {
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+	bottom: 0;
+	position: absolute;
 }
 .showcase__portal__image-wrapper {
 	background-color: transparent;
