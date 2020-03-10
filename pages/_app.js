@@ -1,6 +1,5 @@
 import Router from "next/router";
 import withGA from "next-ga";
-import '../static/css/main.css';
 
 function MyApp({ Component, pageProps }) {
    
