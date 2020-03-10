@@ -1667,7 +1667,8 @@ body #header.hover .logo img {
     display: block;
     margin: auto;
     overflow: hidden;
-    width: 90%;
+	width: 90%;
+	max-width: 1487px;
 }
 .showcase__portal__image-wrapper img {
 	max-width: 100%;
