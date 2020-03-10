@@ -1,6 +1,9 @@
 import CloseButton from "../../CloseButton";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, RefObject } from "react";
 import { isEmpty, chunk } from 'lodash';
+import { ShowcaseItemData } from "../../models";
+import { uuidv4 } from "../../../services/utils";
+import ShowcaseItem from './ShowcaseItem/index';
 
 interface pageProps {
     isActive: boolean;
@@ -8,18 +11,16 @@ interface pageProps {
     paragraphs: string[];
     close: () => void;
     name: string;
-    showcaseItems: ShowcaseItem[];
+    showcaseItems: ShowcaseItemData[];
+    wrapper: RefObject<HTMLDivElement>;
     
 }
 
-interface ShowcaseItem{
-    url: string;
-    name: string;
-}
 
 
 function Showcase(props: pageProps){
     const modalRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
         
         if(props.isActive && !isEmpty(modalRef.current)) {
@@ -49,13 +50,6 @@ function Showcase(props: pageProps){
     
     const newArray = chunk(props.showcaseItems, 3);
  
-    function  uuidv4(){
-        return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-            var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
-            return v.toString(16);
-        });
-    }
-
     return(
         <article id={props.name} ref={modalRef} >
             <h2 className="major">{props.header}</h2>
@@ -66,18 +60,12 @@ function Showcase(props: pageProps){
                 );
             })}
             
-            {newArray.map((items: ShowcaseItem[]) => {
+            {newArray.map((items: ShowcaseItemData[]) => {
                 return (
                     <div key={uuidv4()} style={{display: 'flex', justifyContent: 'center'}}>
                         {
-                            items.map((item: ShowcaseItem) => {
-                                return <div key={uuidv4()} style={{maxWidth: '30%', position: 'relative', padding: '0 4px'}} >
-                                    <img src={item.url} style={{maxWidth: '100%', height: 'auto'}} />
-                                    <div style={{position: 'absolute', top: '60%', left: 0, right: 0, backgroundColor: 'rgba(0,0,0,0.5)'}}>
-                                        <span >{item.name}</span>
-                                    </div>
-                                    
-                                </div>
+                            items.map((item: ShowcaseItemData) => {
+                                return <React.Fragment key={uuidv4()} ><ShowcaseItem wrapper={props.wrapper} item={item}/></React.Fragment> 
                             })
                         }
                     </div>

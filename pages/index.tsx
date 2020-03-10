@@ -31,6 +31,7 @@ function Home () {
   const modalRef = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement>(null);
   const footerRef = useRef<HTMLDivElement>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
       
@@ -70,7 +71,7 @@ function Home () {
  
   return(
     <>
-    <div id="wrapper">
+    <div id="wrapper" ref={wrapperRef}>
       {head && head}
     <header id="header" ref={modalRef} className={hover} >
       <div className="logo">
@@ -96,7 +97,7 @@ function Home () {
     <div id="main" ref={mainRef} >
       {modal.intro && <Generic name="intro" isActive={modal.intro} header="Intro" paragraphs={_.map(introParas, p => p['en'])} img={"static/images/vladbw1-flat.jpg"} close={close}/>}
       {modal.work &&  <Generic name="work" isActive={modal.work} header="Work" paragraphs={_.map(workParas, p => p['en'])} close={close}/>}
-      {modal.showcase && <Showcase name="showcase" isActive={modal.showcase} showcaseItems={_.map(pixelarityData, data => {return { url: data.img, name: data['en']}})} header="ShowCase" paragraphs={_.map(showcaseParas, p => p['en'])} close={close}/>}
+      {modal.showcase && <Showcase wrapper={wrapperRef} name="showcase" isActive={modal.showcase} showcaseItems={_.map(pixelarityData, data => {return { url: data.img, name: data['en'], thumb: data.thumb}})} header="ShowCase" paragraphs={_.map(showcaseParas, p => p['en'])} close={close}/>}
       {modal.contact && <Contact name="contact" isActive={modal.contact} header="Contact" close={close} />}
     </div>
 

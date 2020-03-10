@@ -48,42 +48,85 @@ export const pixelarityData = [
         en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
-        img: '/static/images/pixelarity/alpha.png'
+        img: '/static/images/pixelarity/alpha.jpg',
+        thumb: '/static/images/pixelarity/alpha_thumb.jpg'
     },
     {
         en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
-        img: '/static/images/pixelarity/altitude.png'
+        img: '/static/images/pixelarity/altitude.jpg',
+        thumb: '/static/images/pixelarity/altitude_thumb.jpg'
     },
     {
         en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
-        img: '/static/images/pixelarity/astral.png'
+        img: '/static/images/pixelarity/astral.jpg',
+        thumb: '/static/images/pixelarity/astral_thumb.jpg'
     },
     {
         en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
-        img: '/static/images/pixelarity/axiom.png'
+        img: '/static/images/pixelarity/axiom.jpg',
+        thumb: '/static/images/pixelarity/axiom_thumb.jpg'
     },
     {
         en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
-        img: '/static/images/pixelarity/polaris.png'
+        img: '/static/images/pixelarity/polaris.jpg',
+        thumb: '/static/images/pixelarity/polaris_thumb.jpg'
     },
     {
         en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
-        img: '/static/images/pixelarity/strongly_typed.png'
+        img: '/static/images/pixelarity/strongly_typed.jpg',
+        thumb: '/static/images/pixelarity/strongly_typed_thumb.jpg'
     },
     {
         en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
         fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
-        img: '/static/images/pixelarity/dopetrope.png'
+        img: '/static/images/pixelarity/dopetrope.jpg',
+        thumb: '/static/images/pixelarity/dopetrope_thumb.jpg'
+    },
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/axiom.jpg',
+        thumb: '/static/images/pixelarity/axiom_thumb.jpg'
+    },
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/construct.jpg',
+        thumb: '/static/images/pixelarity/construct_thumb.jpg'
+    },
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/momentum.jpg',
+        thumb: '/static/images/pixelarity/momentum_thumb.jpg'
+    },
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/elevation.jpg',
+        thumb: '/static/images/pixelarity/elevation_thumb.jpg'
+    }
+    ,
+    {
+        en: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        sv: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        fr: 'Lorem ipsum dolor sit amet, consectetur et adipiscing elit.',
+        img: '/static/images/pixelarity/elemental.jpg',
+        thumb: '/static/images/pixelarity/elemental_thumb.jpg'
     }
 ]
