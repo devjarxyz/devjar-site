@@ -1,13 +1,7 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-/*
-	Dimension by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
-*/
 
-/* Reset */
 
 	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 		margin: 0;
@@ -16,6 +10,7 @@
 		font-size: 100%;
 		font: inherit;
 		vertical-align: baseline;
+		height: auto;
 	}
 
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -1649,17 +1644,21 @@ body #header.hover .logo img {
 	transform: scale(1.4);
 }
 .showcase__portal__wrapper {
-	position: absolute;
-    width: 100vw;
-    height: 100vh;
-    display: block;
+	
+    width: 100%;
+    height: 100%;
+    display: table;
     padding: 100px 20px;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.9);
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+	bottom: 0;
+	position: absolute;
+	min-height: 100vh;
+	transition: opacity 0.5s ease-in;
+	opacity: 0;
 }
 .showcase__portal__image-wrapper {
 	background-color: transparent;
@@ -1690,3 +1689,7 @@ body #header.hover .logo img {
 	padding-right: 10px;
 	cursor: pointer;
 } 
+
+.show {
+  opacity: 1;
+}
