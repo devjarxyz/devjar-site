@@ -31,11 +31,19 @@ const Contact = (props: pageProps) => {
                 <li><input type="reset" value="Reset" /></li>
             </ul>
             </form>
+            <div className="contact-info" >
+                <p>
+                    Phone: <a href='telto: 0044 749489 30 86'> +44 749 489 30 86</a>
+                </p>
+                <p>
+                    mail: <a href='mailto: vladimir.strukelj@gmail.com'>vladimir.strukelj@gmail.com</a>
+                </p>
+            </div>
             <ul className="icons">
-            <li><a href="https://www.linkedin.com/in/vladimir-strukelj-00016b61/" className="icon fa-linkedin" target="_blank"><span className="label">Twitter</span></a></li>
-            <li><a href="https://www.facebook.com/vladdewilson" className="icon fa-facebook" target="_blank"><span className="label">Facebook</span></a></li>
-            <li><a href="https://www.instagram.com/vladstrukelj" className="icon fa-instagram" target="_blank"><span className="label">Instagram</span></a></li>
-            <li><a href="https://github.com/devjarxyz" className="icon fa-github" target="_blank"><span className="label">GitHub</span></a></li>
+                <li><a href="https://www.linkedin.com/in/vladimir-strukelj-00016b61/" className="icon fa-linkedin" target="_blank"><span className="label">Twitter</span></a></li>
+                <li><a href="https://www.facebook.com/vladdewilson" className="icon fa-facebook" target="_blank"><span className="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/vladstrukelj" className="icon fa-instagram" target="_blank"><span className="label">Instagram</span></a></li>
+                <li><a href="https://github.com/devjarxyz" className="icon fa-github" target="_blank"><span className="label">GitHub</span></a></li>
             </ul>
             <CloseButton close={props.close} />
       </article>
