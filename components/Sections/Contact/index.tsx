@@ -36,7 +36,7 @@ const Contact = (props: pageProps) => {
                     Phone: <a href='telto: 0044 749489 30 86'> +44 749 489 30 86</a>
                 </p>
                 <p>
-                    mail: <a href='mailto: vladimir.strukelj@gmail.com'>vladimir.strukelj@gmail.com</a>
+                    mail: <a href='mailto: vlad@devjar.xyz'>vlad@devjar.xyz</a>
                 </p>
             </div>
             <ul className="icons">
