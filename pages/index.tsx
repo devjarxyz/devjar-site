@@ -23,6 +23,10 @@ function Home () {
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-WWKRLL9');</script>
         <!-- End Google Tag Manager -->`}} />
+    <script dangerouslySetInnerHTML={{ __html: `<!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWKRLL9"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->`}}/>
 
   </Head>);
 
