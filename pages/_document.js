@@ -24,15 +24,19 @@ export default class CustomDocument extends Document {
     return (
       <html lang="en">
         <Head>
-
+        <title>Devjar</title>
+        <link rel="icon" href="/favicon.ico" />
+        <link href="/static/assets/css/main.css" rel="stylesheet" />
           {/* We only want to add the scripts if in production */}
           {isProduction && (
             <Fragment>
+
               {/* Global Site Tag (gtag.js) - Google Analytics */}
               <script
                 async
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
               />
+              {console.log("isProd")}
               <script
                 dangerouslySetInnerHTML={{
                   __html: `
@@ -56,13 +60,9 @@ export default class CustomDocument extends Document {
               />
             </Fragment>
           )}
+          
         </Head>
         <body>
-          <script dangerouslySetInnerHTML={{ __html: `<!-- Google Tag Manager (noscript) -->
-            <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=${GTM_TRACKING_ID}"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-            <!-- End Google Tag Manager (noscript) -->`}}
-          />
           <Main />
           <NextScript />
         </body>

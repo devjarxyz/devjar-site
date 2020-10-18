@@ -41,6 +41,7 @@ function Generic(props: pageProps){
            
           };
     }, [props.isActive]);
+
     return(
         <article id={props.name} ref={modalRef} >
             <h2 className="major">{props.header}</h2>

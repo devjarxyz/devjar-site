@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { useState, useRef, useEffect } from 'react';
 import _, { isEmpty } from 'lodash';
 import Generic from '../components/Sections/Generic';
@@ -10,25 +9,6 @@ function Home () {
   const initState = {intro: false, work: false, showcase: false, contact: false };
   const [modal, setModal] = useState({...initState});
   const [hover, setHover] = useState("");
- 
-
-  const [head] = useState( <Head>
-    <title>Devjar</title>
-    <link rel="icon" href="/favicon.ico" />
-    <link href="/static/assets/css/main.css" rel="stylesheet" />
-    <script dangerouslySetInnerHTML={{ __html: `<!-- Google Tag Manager -->
-        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-WWKRLL9');</script>
-        <!-- End Google Tag Manager -->`}} />
-    <script dangerouslySetInnerHTML={{ __html: `<!-- Google Tag Manager (noscript) -->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWKRLL9"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->`}}/>
-
-  </Head>);
 
   const close = () => {
     document.body.classList.remove('is-article-visible');
@@ -69,7 +49,6 @@ function Home () {
         
       }
        
-    
 
       return () => {
         // document.body.classList.remove('is-article-visible');
@@ -83,7 +62,7 @@ function Home () {
   return(
     <>
     <div id="wrapper" ref={wrapperRef}>
-      {head && head}
+      
     <header id="header" ref={modalRef} className={hover} >
       <div className="logo">
         <img src="/static/images/logoNoBg.png"/>
