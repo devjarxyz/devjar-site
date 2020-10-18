@@ -25,7 +25,12 @@ function Home () {
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-      
+    (window as any).dataLayer.push({'event': 'gtm.load', 'mainlocation': 'loaded'})
+
+   }, [])
+
+  useEffect(() => {
+   
       if(modal.showcase || modal.contact || modal.intro || modal.work) {
         if(!isEmpty(modalRef.current) && !isEmpty(mainRef.current) && !isEmpty(mainRef.current)){
           
@@ -48,7 +53,7 @@ function Home () {
           }
         
       }
-       
+      
 
       return () => {
         // document.body.classList.remove('is-article-visible');
@@ -57,7 +62,7 @@ function Home () {
         //       mainRef.current!.style.display = 'none';
         };
   }, [modal.showcase, modal.contact, modal.intro, modal.work]);
-
+  
  
   return(
     <>
@@ -76,7 +81,10 @@ function Home () {
       </div>
       <nav>
         <ul>
-          <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => activateModal('intro')} >Intro</a></li>
+          <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => { 
+              (window as any).dataLayer.push({ 'event': 'subpage_change'})
+              activateModal('intro'); 
+            }} >Intro</a></li>
           <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => activateModal('work')}>Work</a></li>
           <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => activateModal('showcase')}>Showcase</a></li>
           <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => activateModal('contact')}>Contact</a></li>
