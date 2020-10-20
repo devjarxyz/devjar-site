@@ -85,7 +85,10 @@ function Home () {
       <nav>
         <ul>
           <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => { 
-              (window as any).dataLayer.push({ 'event': 'subpage_change'})
+            const isProduction = process.env.NODE_ENV === 'production';
+            if(isProduction)
+              (window as any).dataLayer.push({ 'event': 'subpage_change'});
+
               activateModal('intro'); 
             }} >Intro</a></li>
           <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => activateModal('work')}>Work</a></li>
