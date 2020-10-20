@@ -86,8 +86,10 @@ function Home () {
         <ul>
           <li><a onMouseOver={() => setHover('hover')} onMouseLeave={() => setHover('')} onClick={() => { 
             const isProduction = process.env.NODE_ENV === 'production';
-            if(isProduction)
+            if(isProduction) {
+              console.log('tagging prod');
               (window as any).dataLayer.push({ 'event': 'subpage_change'});
+            }
 
               activateModal('intro'); 
             }} >Intro</a></li>
