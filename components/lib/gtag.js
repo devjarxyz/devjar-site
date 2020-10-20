@@ -1,5 +1,5 @@
 export const GA_TRACKING_ID = 'UA-99740932-2';
-export const GTM_TRACKING_ID = 'GTM-WWKRLL9';
+export const GTM_TRACKING_ID = 'GTM-5HTDTB7';
 
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
