@@ -34,7 +34,7 @@ export default class CustomDocument extends Document {
               {/* Global Site Tag (gtag.js) - Google Analytics */}
               <script
                 async
-                src={`https://ghs.googlehosted.com/gtag/js?id=${GA_TRACKING_ID}`}
+                src={`https://handler.devjar.xyz/gtag/js?id=${GA_TRACKING_ID}`}
               />
               {console.log("isProd")}
               <script
