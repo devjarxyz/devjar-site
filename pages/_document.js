@@ -36,7 +36,7 @@ export default class CustomDocument extends Document {
                 async
                 src={`https://handler.devjar.xyz/gtag/js?id=${GA_TRACKING_ID}`}
               />
-              {console.log("isProd")}
+              
               <script
                 dangerouslySetInnerHTML={{
                   __html: `

@@ -18,5 +18,5 @@ export const event = ({ action, category, label, value }) => {
     value: value,
   })
 
-  window.dataLayer.push({event: action});
+  
 }
