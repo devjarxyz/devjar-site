@@ -24,10 +24,10 @@ function Home () {
   const footerRef = useRef<HTMLDivElement>(null);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    (window as any).dataLayer.push({'event': 'gtm.load', 'mainlocation': 'loaded'})
+  // useEffect(() => {
+  //   (window as any).dataLayer.push({'event': 'gtm.load', 'mainlocation': 'loaded'})
 
-   }, [])
+  //  }, [])
 
   useEffect(() => {
    
